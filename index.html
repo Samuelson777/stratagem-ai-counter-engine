@@ -231,11 +231,11 @@
       <!-- Panel L1: Recursive Bayesian First-Attack Archetype Posterior + Bayes-Relational Prior -->
       <div id="dock-bayesian" class="surface-card p-2.5" data-xray="Recursive Bayesian Belief B_{t+1}(theta_i) + Bayes-Relational Prior Adaptation P(x|D_p) = P(x|D)*[P(D_p|x)/(1-P(D_p|x))]">
         <div class="flex items-center justify-between mb-1">
-          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400">1. Bayesian Archetype Belief $B_{t+1}(\Theta)$</h2>
+          <h2 class="text-[11px] font-bold uppercase tracking-wider text-sky-400">1. Bayesian Archetype Belief B_{t+1}(\Theta)</h2>
           <span id="revelation-lock-badge" class="text-[10px] mono px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-semibold">SCANNING: PLY 0/6</span>
         </div>
         <div class="flex items-center justify-between text-[10px] mono opacity-80 mb-1.5 bg-slate-900/70 px-2 py-1 rounded border border-slate-800">
-          <span>Bayes-Relational $P(x|D_p)/P(x|D)$:</span>
+          <span>Bayes-Relational P(x|D_p)/P(x|D):</span>
           <b id="bayes-rel-ratio" class="text-emerald-400">1.00x (Prior)</b>
         </div>
         <div id="archetype-bars" class="flex flex-col gap-1.5"></div>
@@ -249,20 +249,20 @@
         </div>
         <div class="grid grid-cols-3 gap-1.5 text-center mono my-1">
           <div class="bg-slate-900/85 p-1 rounded border border-slate-800">
-            <div class="text-[9px] text-slate-400">Move $\Delta t_k$</div>
+            <div class="text-[9px] text-slate-400">Move \Delta t_k</div>
             <div id="hud-clock-dt" class="text-xs font-bold text-sky-400">0.42s</div>
           </div>
           <div class="bg-slate-900/85 p-1 rounded border border-slate-800">
-            <div class="text-[9px] text-slate-400">Move $\Delta WP$</div>
+            <div class="text-[9px] text-slate-400">Move \Delta WP</div>
             <div id="hud-dwp-val" class="text-xs font-bold text-emerald-400">-0.004</div>
           </div>
           <div class="bg-slate-900/85 p-1 rounded border border-slate-800">
-            <div class="text-[9px] text-slate-400">Rank $\hat{P}_{\text{new}}(r)$</div>
+            <div class="text-[9px] text-slate-400">Rank \hat{P}_{\text{new}}(r)</div>
             <div id="hud-spatial-rank" class="text-xs font-bold text-amber-400">0.78 Hi</div>
           </div>
         </div>
         <div id="spatial-rank-narrative" class="text-[10px] opacity-80 leading-snug">
-          Inverse-distance weight $w_a = 1/d_a$ ($\gamma=0.65$): monitoring unblocked adjacent enemy units for passive trap/bluff signatures.
+          Inverse-distance weight w_a = 1/d_a (\gamma=0.65): monitoring unblocked adjacent enemy units for passive trap/bluff signatures.
         </div>
       </div>
 
@@ -276,13 +276,13 @@
           <span id="ml-epoch-badge" class="text-[10px] mono bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded border border-purple-500/40 font-semibold">79M | 57.1% Acc</span>
         </div>
         <div class="flex items-center justify-between text-[10px] mb-1">
-          <span class="opacity-85">Simplex $\Delta_\gamma^{K+1}$ Blend:</span>
+          <span class="opacity-85">Simplex \Delta_\gamma^{K+1} Blend:</span>
           <span id="dch-blend-label" class="mono text-sky-400 font-bold">75% GenBR / 25% Nash</span>
         </div>
         <input type="range" id="dch-slider" min="0" max="100" value="75" oninput="StratagemEngine.updateDCHBlend(this.value)" class="w-full accent-sky-500 cursor-pointer h-1.5 bg-slate-800 rounded" />
         <div class="flex justify-between text-[10px] opacity-80 mono mt-1">
           <span>JPC Loss Red: <b class="text-emerald-400">56.1%</b></span>
-          <span>Regret $R_-$: <b class="text-sky-400">0.156</b></span>
+          <span>Regret R_-: <b class="text-sky-400">0.156</b></span>
           <span id="wasm-status-pill" class="text-emerald-400 font-bold">WASM: OK</span>
         </div>
       </div>
@@ -295,7 +295,7 @@
         <div class="flex items-center gap-1.5 min-w-0 flex-1">
           <span id="coach-step-badge" class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 mono text-[10px] font-bold shrink-0">GUIDE 1/7</span>
           <span id="coach-step-text" class="text-[11px] font-medium truncate">
-            <b>Step 1 (First Attack &amp; Legal Mask $M_{i \to j}$):</b> Tap any friendly character on the board (or "Demo") to observe strict legal action masking &amp; $\Delta t_k$.
+            <b>Step 1 (First Attack &amp; Legal Mask M_{i \to j}):</b> Tap any friendly character on the board (or "Demo") to observe strict legal action masking &amp; \Delta t_k.
           </span>
         </div>
         <div class="flex items-center gap-1 shrink-0 ml-auto">
@@ -309,10 +309,10 @@
       <div id="center-shader-bar" class="w-full max-w-[740px] flex flex-wrap items-center justify-between gap-1 surface-card px-2 py-1 shrink-0 my-1">
         <div class="flex items-center gap-1 text-xs flex-wrap">
           <button onclick="StratagemEngine.toggleOverlay('characters')" id="ov-characters" data-xray="Toggle Animated Articulated Character Units vs Classic 3D Emblems" class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/30 border border-amber-400 text-amber-200 transition">&#9876; Characters: ON</button>
-          <button onclick="StratagemEngine.toggleOverlay('influence')" id="ov-influence" data-xray="Directionally Biased Dynamic Influence Map I_u(r,c)" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-600/30 border border-sky-500 text-sky-200 transition">Influence $I_u$</button>
+          <button onclick="StratagemEngine.toggleOverlay('influence')" id="ov-influence" data-xray="Directionally Biased Dynamic Influence Map I_u(r,c)" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-600/30 border border-sky-500 text-sky-200 transition">Influence I_u</button>
           <button onclick="StratagemEngine.toggleOverlay('gab')" id="ov-gab" data-xray="Chessformer 64-Token Geometric Attention Bias B_GAB(X) (smolgen) animated rays" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-600/30 border border-purple-500 text-purple-200 transition">GAB Rays</button>
           <button onclick="StratagemEngine.toggleOverlay('counter')" id="ov-counter" data-xray="OM-SO-ISMCTS & GenBR Predicted Opponent Attack (dashed crimson) + Counter-Strategy (solid emerald)" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-600/30 border border-emerald-500 text-emerald-200 transition">GenBR Arrows</button>
-          <button onclick="StratagemEngine.toggleOverlay('potential')" id="ov-potential" data-xray="Co-evolved Attractive-Repulsive Potential Field PF(d)" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-600/30 border border-rose-500 text-rose-200 transition">Field $PF(d)$</button>
+          <button onclick="StratagemEngine.toggleOverlay('potential')" id="ov-potential" data-xray="Co-evolved Attractive-Repulsive Potential Field PF(d)" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-600/30 border border-rose-500 text-rose-200 transition">Field PF(d)</button>
           <button onclick="StratagemEngine.toggle3DTilt()" id="ov-tilt" data-xray="Toggle 2.5D Tactical Command Perspective Tilt" class="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 border border-slate-600 text-slate-200 transition">2.5D Tilt</button>
         </div>
         <div class="hidden sm:flex items-center gap-2 text-[10px] mono font-semibold">
@@ -334,7 +334,7 @@
               <span class="text-[10px] mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/40 font-bold">FSM: POST_GAME_REVIEW</span>
             </div>
             <p id="terminal-verdict-desc" class="text-xs text-slate-200 leading-relaxed">
-              Strict Legal Action Mask $M_{i \to j} = 0$: The King has zero legal escape squares. In accordance with chess law and the architectural specification, play halts upon Checkmate before King capture.
+              Strict Legal Action Mask M_{i \to j} = 0: The King has zero legal escape squares. In accordance with chess law and the architectural specification, play halts upon Checkmate before King capture.
             </p>
             <div class="flex items-center justify-end gap-2 pt-1">
               <button onclick="StratagemEngine.stepBack()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition">&larr; Undo Last Ply</button>
@@ -348,7 +348,7 @@
       <div id="center-bottom-status" class="w-full max-w-[740px] surface-card px-2.5 py-1.5 flex items-center justify-between gap-2 text-xs shrink-0 mt-1">
         <div class="flex items-center gap-2 truncate">
           <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/40 mono text-[10px] font-bold shrink-0" id="active-turn-indicator">WHITE COMMANDER</span>
-          <span id="live-status-banner" class="font-medium truncate text-[11px]">Strict King-Safety Mask $M_{i \to j}$ active. Tap any friendly unit to attack.</span>
+          <span id="live-status-banner" class="font-medium truncate text-[11px]">Strict King-Safety Mask M_{i \to j} active. Tap any friendly unit to attack.</span>
         </div>
         <div class="mono text-[10px] sm:text-[11px] opacity-85 shrink-0 font-semibold" id="fen-short-display">Ply: 0 | Legal: 20</div>
       </div>
@@ -365,7 +365,7 @@
         <div class="space-y-1.5 text-xs">
           <div class="p-2 rounded bg-slate-900/90 border border-slate-800">
             <div class="flex justify-between text-[10px] uppercase text-rose-400 font-bold">
-              <span>Predicted Opponent Line $P_{\text{opp}}(c|s_v)$:</span>
+              <span>Predicted Opponent Line P_{\text{opp}}(c|s_v):</span>
               <span id="opp-policy-conf" class="mono">57.1% Top-1</span>
             </div>
             <div id="predicted-opp-line" class="mono text-[11px] text-slate-200 mt-0.5">1. e4 e5 2. Nf3 Nc6 3. Bc4 (Italian f7 Kingside Siege)</div>
@@ -386,7 +386,7 @@
           <h3 class="text-[11px] font-bold uppercase tracking-wider text-amber-400">5. 172-Concept Linear Probe Oracle</h3>
           <span class="text-[9px] mono bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded border border-amber-500/40 font-semibold">1024-D | 93.6% Cov</span>
         </div>
-        <p class="text-[10px] opacity-80 mb-1.5">Probing $\mathbf{z}(\mathcal{B}) \in \mathbb{R}^{1024}$ where Master ($g(\mathbf{z}_{2600}) \gt 0.85$) vs. Opponent ($g(\mathbf{z}_{\text{opp}}) \lt 0.30$) exposes a blind spot:</p>
+        <p class="text-[10px] opacity-80 mb-1.5">Probing \mathbf{z}(\mathcal{B}) \in \mathbb{R}^{1024} where Master (g(\mathbf{z}_{2600}) \gt 0.85) vs. Opponent (g(\mathbf{z}_{\text{opp}}) \lt 0.30) exposes a blind spot:</p>
         <div id="concept-probe-list" class="flex flex-col gap-1.5"></div>
       </div>
 
@@ -483,7 +483,7 @@
               Attention_h(Q,K,V) = softmax(QK^T / sqrt(d_k) + B_GAB^(h)(X)) * V<br/>
               P(move_{i-&gt;j} | X, e_skill, tau_hist) &prop; exp(q_src(h_i)^T k_dst(h_j) / sqrt(d_p)) * M_{i-&gt;j}
             </div>
-            <p class="text-[11px] text-slate-400">The binary legal-move mask $M_{i \to j} \in \{0, 1\}$ strictly zeroes out any move that leaves the King in check and halts play upon Checkmate ($\sum M_{i \to j} = 0$).</p>
+            <p class="text-[11px] text-slate-400">The binary legal-move mask M_{i \to j} \in \{0, 1\} strictly zeroes out any move that leaves the King in check and halts play upon Checkmate (\sum M_{i \to j} = 0).</p>
           </div>
 
           <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg space-y-1.5">
@@ -501,7 +501,7 @@
               w_k* = argmin_w sum_i L(g(z(B_i) | w), c_k(B_i)) + lambda * ||w||_1<br/>
               P_new(r) = P_old(r) + (W_bar_r - P_old(r)) * (max w_a / w_max) * gamma
             </div>
-            <p class="text-[11px] text-slate-400">Probes 1024-D pooled residual stream (93.6% transitional blunder coverage) and decodes hidden ranks via inverse distance $w_a = 1/d_a$.</p>
+            <p class="text-[11px] text-slate-400">Probes 1024-D pooled residual stream (93.6% transitional blunder coverage) and decodes hidden ranks via inverse distance w_a = 1/d_a.</p>
           </div>
 
           <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg space-y-1.5">
@@ -510,7 +510,7 @@
               I_u(r,c) = W_u * exp(-lambda_u * d(u,r,c)) * (1 + beta_u * cos(phi))<br/>
               PF(d) = c_attr * d^(e_attr) - c_rep * d^(e_rep)
             </div>
-            <p class="text-[11px] text-slate-400">Projects directional tactical pressure and co-evolved kiting/flanking trajectories ($HP_b, D_{\text{kite}}, s_{\text{wait}}, D_{\text{retreat}}$).</p>
+            <p class="text-[11px] text-slate-400">Projects directional tactical pressure and co-evolved kiting/flanking trajectories (HP_b, D_{\text{kite}}, s_{\text{wait}}, D_{\text{retreat}}).</p>
           </div>
         </div>
       </div>
@@ -552,7 +552,7 @@
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
         <div>
           <span class="text-[11px] mono uppercase text-purple-400 font-bold">In-Browser Deep Learning &amp; Imitation Learning Studio</span>
-          <h2 class="text-sm sm:text-base font-bold text-white mt-0.5">64-Token Chessformer (Maia-3) + $\ell_1$ Linear Probe &amp; Stylometry Trainer</h2>
+          <h2 class="text-sm sm:text-base font-bold text-white mt-0.5">64-Token Chessformer (Maia-3) + \ell_1 Linear Probe &amp; Stylometry Trainer</h2>
         </div>
         <button onclick="StratagemEngine.closeMLStudioModal()" class="text-slate-400 hover:text-white text-xl font-bold px-2">&times;</button>
       </div>
@@ -573,12 +573,12 @@
         <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-lg space-y-2">
           <div class="font-bold text-emerald-400 uppercase text-[10px]">2. Hyperparameters</div>
           <div class="flex justify-between">
-            <span>Learning Rate ($\eta$):</span>
+            <span>Learning Rate (\eta):</span>
             <span id="lr-label" class="mono text-emerald-400">0.0015</span>
           </div>
           <input type="range" min="1" max="50" value="15" oninput="document.getElementById('lr-label').textContent=(this.value/10000).toFixed(4)" class="w-full accent-emerald-500 h-1.5 bg-slate-800 rounded" />
           <div class="flex justify-between mt-1">
-            <span>$\ell_1$ Probe Sparsity ($\lambda$):</span>
+            <span>\ell_1 Probe Sparsity (\lambda):</span>
             <span id="l1-label" class="mono text-amber-400">0.005</span>
           </div>
           <input type="range" min="1" max="50" value="5" oninput="document.getElementById('l1-label').textContent=(this.value/1000).toFixed(3)" class="w-full accent-amber-500 h-1.5 bg-slate-800 rounded" />
@@ -880,7 +880,7 @@
           badge: 'GUIDE 1/7',
           targetId: 'board-viewport-wrap',
           mobilePanel: 'arena',
-          text: '<b>Step 1 (First Attack &amp; Legal Mask $M_{i \to j}$):</b> Tap any friendly character on the board (or "Demo") to observe strict King-safety action masking &amp; $\Delta t_k$.'
+          text: '<b>Step 1 (First Attack &amp; Legal Mask M_{i \to j}):</b> Tap any friendly character on the board (or "Demo") to observe strict King-safety action masking &amp; \Delta t_k.'
         },
         {
           badge: 'GUIDE 2/7',
@@ -916,7 +916,7 @@
           badge: 'GUIDE 7/7',
           targetId: 'mode-specific-left',
           mobilePanel: 'arena',
-          text: '<b>Step 7 (Terminal Checkmate &amp; Mode 6 Combat):</b> Click "Test Checkmate" in the bottom bar to verify that play halts immediately at Checkmate ($M_{i \to j}=0$)!'
+          text: '<b>Step 7 (Terminal Checkmate &amp; Mode 6 Combat):</b> Click "Test Checkmate" in the bottom bar to verify that play halts immediately at Checkmate (M_{i \to j}=0)!'
         }
       ];
 
@@ -1260,7 +1260,7 @@
             playTacticalTone(220, 0.35, 'sawtooth', 110);
             if (titleEl) titleEl.textContent = `CHECKMATE // ${winnerSide} WINS!`;
             if (descEl) {
-              descEl.innerHTML = `<b>Deterministic Legal Action Mask $\\sum M_{i \\to j} = 0$:</b> The ${turn === 'w' ? 'White' : 'Black'} King is in check with zero legal escape moves. Per the research specification, the match terminates immediately upon Checkmate—the King is never captured.`;
+              descEl.innerHTML = `<b>Deterministic Legal Action Mask \\sum M_{i \\to j} = 0:</b> The ${turn === 'w' ? 'White' : 'Black'} King is in check with zero legal escape moves. Per the research specification, the match terminates immediately upon Checkmate—the King is never captured.`;
             }
             document.getElementById('live-status-banner').textContent =
               `CHECKMATE! ${winnerSide} wins. Play halted by XState terminal guard.`;
@@ -1270,7 +1270,7 @@
             playTacticalTone(340, 0.25, 'triangle', 340);
             if (titleEl) titleEl.textContent = 'STALEMATE // MATCH DRAWN';
             if (descEl) {
-              descEl.innerHTML = `<b>Deterministic Legal Action Mask $\\sum M_{i \\to j} = 0$:</b> No legal moves remain and the King is not in check. Match concluded as a Stalemate draw.`;
+              descEl.innerHTML = `<b>Deterministic Legal Action Mask \\sum M_{i \\to j} = 0:</b> No legal moves remain and the King is not in check. Match concluded as a Stalemate draw.`;
             }
             document.getElementById('live-status-banner').textContent =
               'STALEMATE! Zero legal moves remain. Match drawn.';
@@ -2638,7 +2638,7 @@
         if (currentMode === 1) {
           panel.innerHTML = `
             <h3 class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Mode 1: First-Attack Counter</h3>
-            <p class="text-[10px] opacity-85 leading-snug">Strict King-Safety Mask $M_{i \\to j}$ active. Tap any character unit or run the demo / Fool's Mate Checkmate test.</p>
+            <p class="text-[10px] opacity-85 leading-snug">Strict King-Safety Mask M_{i \\to j} active. Tap any character unit or run the demo / Fool's Mate Checkmate test.</p>
             <div class="grid grid-cols-2 gap-1">
               <button onclick="StratagemEngine.runGuidedDemoAttack()" class="py-1.5 rounded bg-emerald-600 hover:bg-emerald-500 text-[11px] font-bold text-white shadow transition">&#9654; Opening Demo</button>
               <button onclick="StratagemEngine.runFoolsMateCheckmateTest()" class="py-1.5 rounded bg-amber-600 hover:bg-amber-500 text-[11px] font-bold text-white shadow transition">&#9812; Checkmate Demo</button>
@@ -2648,7 +2648,7 @@
           panel.innerHTML = `
             <h3 class="text-[11px] font-bold uppercase tracking-wider text-sky-400">Mode 2: Maia-3 Spar &amp; Clones</h3>
             <div class="text-xs flex justify-between">
-              <span>Skill Conditioning $e_{\text{skill}}$:</span>
+              <span>Skill Conditioning e_{\text{skill}}:</span>
               <span id="elo-val-label" class="mono font-bold text-sky-400">${sparringElo} Elo</span>
             </div>
             <input type="range" min="600" max="2600" step="100" value="${sparringElo}" oninput="StratagemEngine.setSparringElo(this.value)" class="w-full accent-sky-500 cursor-pointer h-1.5 bg-slate-800 rounded" />
@@ -2703,7 +2703,7 @@
             </div>
             ${floorSubMode === 'territory' ? `
               <div class="text-[10px] mono bg-slate-900 text-slate-200 p-1.5 rounded border border-slate-800 space-y-0.5">
-                <div>Actor: <b>#${floorActor}</b> | Area $A_p(t)$: <b>${getTerritoryArea(floorActor)} tiles</b></div>
+                <div>Actor: <b>#${floorActor}</b> | Area A_p(t): <b>${getTerritoryArea(floorActor)} tiles</b></div>
                 <div>must_attack: <b class="${floorMustAttack ? 'text-rose-400' : 'text-slate-400'}">${floorMustAttack}</b> | can_stop: <b class="${floorCanStop ? 'text-emerald-400' : 'text-slate-400'}">${floorCanStop}</b></div>
               </div>
               <div class="flex flex-wrap gap-1">
