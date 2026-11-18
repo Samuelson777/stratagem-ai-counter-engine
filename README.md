@@ -4,7 +4,7 @@
 
 Rather than relying on brute-force alpha-beta search (which plateaus at 46.0% human move prediction accuracy) or artificially weakened self-play engines, STRATAGEM-3 unifies a **64-token Chessformer (Maia-3)** neural architecture, **online Bayesian opponent modeling**, **Generative Best Response (GenBR) Information Set MCTS**, a **172-concept mechanistic interpretability oracle**, and **hardware-accelerated spatial influence shaders** inside a zero-overlap **XState + WebAssembly + WebGPU** workspace.
 
-[![Hugging Face](https://img.shields.io/badge/Stratagem-3%20Counter%20AI-%23FF9900.svg?style=plastic&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/Samuelson77/stratagem-3-counter-ai)
+[![Hugging Face](https://img.shields.io/badge/Stratagem%203%20Counter%20AI-%23FF9900.svg?style=plastic&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/Samuelson77/stratagem-3-counter-ai)
 
 [![Hugging Face](https://img.shields.io/badge/Stratagem%20AI%20Counter%20Engine-%23FF9900.svg?style=plastic&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/Samuelson77/stratagem-ai-counter-engine)
 
