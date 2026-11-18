@@ -200,18 +200,10 @@ npm run test:e2e
 
 | Verification Tier | Tooling & Harness | Target Subsystem | Acceptance Criteria |
 | --- | --- | --- | --- |
-| **1. WASM Kernel Unit Tests** | `wasm-bindgen-test`, `cargo test` | Legal move masks, Bayesian normalization, Mode 6 adjacency scan | 100% Perft node accuracy to Depth 6; posterior sum equals 1.0 within 1e-7
-
- |
-| **2. Neural Inference Parity** | ONNX Runtime Web Verifier | 64-token Chessformer trunk, GAB layer, 172 linear concept probes | Max logit delta below 1e-4 between WebGPU FP16 and reference FP32; at least 57.1% Top-1 accuracy
-
- |
-| **3. UI & Zero-Overlap E2E** | `Playwright`, `Vitest`, XState | All buttons, mode switches, modals, and 5-track docking panels | 100% state-transition coverage; zero bounding-box overlaps; Lighthouse 100 a11y/BP
-
- |
-| **4. Game-Theoretic Audit** | Self-Play Arena (`NashConv`, `JPC`, `SDR`) | GenBR counter-planner, DCH Level-5 meta-solver, combat micro | Positive win-rate delta vs target archetypes; at least 56.1% JPC loss reduction
-
- |
+| **1. WASM Kernel Unit Tests** | `wasm-bindgen-test`, `cargo test` | Legal move masks, Bayesian normalization, Mode 6 adjacency scan | 100% Perft node accuracy to Depth 6; posterior sum equals 1.0 within 1e-7 |
+| **2. Neural Inference Parity** | ONNX Runtime Web Verifier | 64-token Chessformer trunk, GAB layer, 172 linear concept probes | Max logit delta below 1e-4 between WebGPU FP16 and reference FP32; at least 57.1% Top-1 accuracy |
+| **3. UI & Zero-Overlap E2E** | `Playwright`, `Vitest`, XState | All buttons, mode switches, modals, and 5-track docking panels | 100% state-transition coverage; zero bounding-box overlaps; Lighthouse 100 a11y/BP |
+| **4. Game-Theoretic Audit** | Self-Play Arena (`NashConv`, `JPC`, `SDR`) | GenBR counter-planner, DCH Level-5 meta-solver, combat micro | Positive win-rate delta vs target archetypes; at least 56.1% JPC loss reduction |
 
 ---
 
