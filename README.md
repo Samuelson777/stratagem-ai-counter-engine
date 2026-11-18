@@ -50,30 +50,14 @@ Traditional game AI systems suffer from two structural limitations when confront
 
 | Subsystem / Model | Architectural Specification | Parameter Scale / Input Representation | Benchmark Performance |
 | --- | --- | --- | --- |
-| **Stockfish / Leela Baseline** | Alpha-Beta Search / Self-Play ResNet + MCTS | Bitboards / 112-plane history boards | At most 46.0% Top-1 human move accuracy
-
- |
-| **Maia-1 (KDD 2020)** | 9 Discrete AlphaZero Convolutional ResNets | 228 input planes (212 piece + 16 metadata) | 46.0% to over 52.0% Top-1 accuracy across 1100–1900 Elo
-
- |
-| **GDM Searchless Chess** | Amortized Planning Decoder Transformer | 270M params; 77–78 linearized FEN tokens (vocab 33) | 49.0% action accuracy on ChessBench 40M
-
- |
-| **Time-Aware Sequence Model** | History & Clock-Trace Transformer | Full PGN move sequence + per-move think times | 55.2% Top-1 human move accuracy
-
- |
-| **Prior SOTA + Search** | Search-Guided Imitation Transformer | 355M params + explicit game-tree lookahead | 55.9% Top-1 human move accuracy
-
- |
-| **STRATAGEM-3 Core (Chessformer / Maia-3)** | Encoder Transformer + Geometric Attention Bias (`smolgen`) | 79M params (4.5x smaller); 64 square tokens + Source-Destination Head | 57.1% Top-1 human accuracy; +100 Elo boost in Leela Chess Zero
-
- |
-| **DCH Meta-Strategy Safety Solver** | Policy Space Response Oracles (PSRO) + Level-5 Hierarchy | 5-Level Cognitive Hierarchy on exploratory simplex | 56.1% JPC loss reduction (regret 0.156), matching 98.9% of Level-10 benefit at 50% compute
-
- |
-| **Mechanistic Interpretability Oracle** | L1-Regularized Sparse Linear Probes | 1024-D pooled residual stream across 172 binary concepts | 93.6% coverage of blundered transitional human positions
-
- |
+| **Stockfish / Leela Baseline** | Alpha-Beta Search / Self-Play ResNet + MCTS | Bitboards / 112-plane history boards | At most 46.0% Top-1 human move accuracy |
+| **Maia-1 (KDD 2020)** | 9 Discrete AlphaZero Convolutional ResNets | 228 input planes (212 piece + 16 metadata) | 46.0% to over 52.0% Top-1 accuracy across 1100–1900 Elo |
+| **GDM Searchless Chess** | Amortized Planning Decoder Transformer | 270M params; 77–78 linearized FEN tokens (vocab 33) | 49.0% action accuracy on ChessBench 40M |
+| **Time-Aware Sequence Model** | History & Clock-Trace Transformer | Full PGN move sequence + per-move think times | 55.2% Top-1 human move accuracy |
+| **Prior SOTA + Search** | Search-Guided Imitation Transformer | 355M params + explicit game-tree lookahead | 55.9% Top-1 human move accuracy |
+| **STRATAGEM-3 Core (Chessformer / Maia-3)** | Encoder Transformer + Geometric Attention Bias (`smolgen`) | 79M params (4.5x smaller); 64 square tokens + Source-Destination Head | 57.1% Top-1 human accuracy; +100 Elo boost in Leela Chess Zero |
+| **DCH Meta-Strategy Safety Solver** | Policy Space Response Oracles (PSRO) + Level-5 Hierarchy | 5-Level Cognitive Hierarchy on exploratory simplex | 56.1% JPC loss reduction (regret 0.156), matching 98.9% of Level-10 benefit at 50% compute |
+| **Mechanistic Interpretability Oracle** | L1-Regularized Sparse Linear Probes | 1024-D pooled residual stream across 172 binary concepts | 93.6% coverage of blundered transitional human positions |
 
 ---
 
